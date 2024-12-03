@@ -1,0 +1,148 @@
+#cos{
+    margin: 20px;
+}
+#handbol, #gustos, #amics, #introduccio, #viatjar{
+    background-color:rgba(255, 255, 255, 0.418);
+    border-radius: 10px;
+}
+body{
+    background-image: url(Fotos/mirallhab.jpg);
+    background-size: 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+/*Aqui donem instruccions als títols i textos*/
+.t2{
+    font-family: Consolas, monaco, monospace;
+    font-size: 25px;
+    text-align: center;
+}
+.txt{
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: justify;
+}
+h3{
+    font-size: 23px;
+}
+/*Aqui donem instruccions a tot el relaciomat amb el titol fixat*/
+#fixed{
+    position: fixed;
+    background-color: rgb(211, 201, 201);
+    width: 100%;
+    height: 50px;
+    margin-top: -100px;
+    margin-left: -10px;
+    z-index: +100;
+}
+#ordre{
+    position: relative;
+}
+#titol{
+    font-family: fantasy;
+    margin-top: 10px;
+    position: fixed;
+    left: 30%;
+}
+/*Aqui donem instruccions a tot el relaciomat amb l'index fixat*/
+#flex_sticky{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+#tindex{
+    text-align: center;
+}
+.index{
+    margin: 10px;
+}
+#sticky{
+    position: sticky;
+    background-color: rgb(132, 190, 223);
+    height: auto;
+    margin-top: 100px;
+    top: 55px;
+    font-size: 18px;
+    width: 100%;
+    border-radius: 10px;
+    z-index: +100;
+}
+/*Aqui donem instruccions a tot el relaciomat amb la introducció*/
+#introduccio{
+    margin-top: 50px;
+}
+#foto_esquena{
+    height: 200px;
+    width: 200px;
+    border-radius: 10px;
+}
+#taula_introduccio{
+    text-align: center;
+}
+#flex_introduccio{
+    display: flex;
+    flex-direction: row;
+}
+#textintr{
+    margin-right: 10px;
+}
+/*Aqui donem instriccions al frid i els seus components*/
+#llista{
+    font-family:cursive;
+}
+#imatges{
+    grid-area:imatges;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    justify-content: space-between;
+}
+.imgs{
+    border-radius: 10px;
+}
+#viatjar{grid-area:viatjar;margin-top: 15px;}
+#gustos{grid-area:gustos;}
+#amics{grid-area:amics;margin-top: 15px;}
+#handbol{grid-area:handbol;margin-top: 15px;}
+#grid{
+    display: grid;
+    grid-template-areas:
+    "gustos imatges"
+    "amics imatges"
+    "handbol imatges"
+    "viatjar imatges";
+}
+#video{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*Aqui donem altres valor per quan la pantalla es menor als 600px*/
+@media (max-width: 600px){
+    #flex_introduccio{
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+/*Aqui donem altres valor per quan la pantalla es menor als 800px*/
+@media (max-width: 700px){
+    #grid{
+        grid-template-areas:
+        "gustos"
+        "amics"
+        "handbol"
+        "viatjar"
+        "imatges";
+    }
+    #imatges{
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: 8px;
+        align-content: space-around;
+        margin-left: auto;
+    }
+    .imgs{
+        margin-top: 7px;
+    }
+}
